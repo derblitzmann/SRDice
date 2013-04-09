@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SRDiceActivity" >
+
+    <TextView
+        android:id="@+id/textNoD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/numDice" />
+
+    <TextView
+        android:id="@+id/textThres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textNoD"
+        android:layout_alignBottom="@+id/textNoD"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/textNoD"
+        android:text="@string/Threshold" />
+
+    <EditText
+        android:id="@+id/editDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textNoD"
+        android:layout_below="@+id/textNoD"
+        android:layout_toLeftOf="@+id/textThres"
+        android:ems="10"
+        android:inputType="number" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/editThres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editDice"
+        android:layout_alignBottom="@+id/editDice"
+        android:layout_alignLeft="@+id/textThres"
+        android:layout_alignRight="@+id/textThres"
+        android:ems="10"
+        android:inputType="number" />
+    
+    <TextView
+        android:id="@+id/textSucc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnClac"
+        android:layout_below="@+id/btnClac"
+        android:layout_marginTop="20dp"
+        android:text="@string/toHit" />
+
+    <EditText
+        android:id="@+id/SuccessOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textSucc"
+        android:layout_alignRight="@+id/editThres"
+        android:layout_below="@+id/textSucc"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textCritGlitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/SuccessOutput"
+        android:layout_below="@+id/SuccessOutput"
+        android:text="@string/critGlitch" />
+
+    <EditText
+        android:id="@+id/CritGlitchOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCritGlitch"
+        android:layout_alignRight="@+id/SuccessOutput"
+        android:layout_below="@+id/textCritGlitch"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textGlitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CritGlitchOutput"
+        android:layout_below="@+id/CritGlitchOutput"
+        android:text="@string/toGlitch" />
+
+    <EditText
+        android:id="@+id/GlitchOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textGlitch"
+        android:layout_alignRight="@+id/CritGlitchOutput"
+        android:layout_below="@+id/textGlitch"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnClac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editDice"
+        android:layout_below="@+id/editDice"
+        android:layout_marginTop="20dp"
+        android:text="@string/CalcBtn"
+        android:onClick="calculateProbs" />
+
+</RelativeLayout>
